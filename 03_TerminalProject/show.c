@@ -6,6 +6,7 @@
 
 #define MIN(X, Y) (((X) < (Y)) ? (X) : (Y))
 #define MAX(X, Y) (((X) > (Y)) ? (X) : (Y))
+#define KEY_ESCAPE 27
 
 void getFileInfo(char *filename, int *nlines, int *ncolumns) {
 	FILE *fp = fopen(filename, "r");
@@ -105,16 +106,13 @@ void display(char *filename) {
 	int height, width;
 	getmaxyx(stdscr, height, width);
 	WINDOW *win = newwin(height - 1, width, 1, 0);
-	wborder(win, 0, 0, 0, 0, 0, 0, 0, 0);
 	whline(win, ACS_HLINE, width);
 	getmaxyx(win, height, width);
 
 	int start = 0, end = height, start_col = 0, end_col = width;
-
-	update_screen(win, filename, -1, buffer, &start, &end, &start_col, &end_col, maxlines, maxcolumns);
 	
-	int ch = getch();
-	while (ch != 'q') {
+	int ch = -1;
+	while (ch != KEY_ESCAPE) {
 	    werase(stdscr);
 	    werase(win);
 		update_screen(win, filename, ch, buffer, &start, &end, &start_col, &end_col, maxlines, maxcolumns);
