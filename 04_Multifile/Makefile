@@ -1,9 +1,8 @@
-CFLAGS = -Wall -fPIC
-
 GENERATES = prog prog-a prog-so README
 TEST_DIR = tmp_dir
 TRASH = *.o *~ o.* *.a *.so $(TEST_DIR)
 CC = cc
+CURRENT_DIR = $(shell pwd)
 
 all:	README prog prog-a prog-so
 
@@ -21,18 +20,17 @@ prog:	const.o fun.o prog.o
 prog-a: prog.o liboutput_static.a
 	$(CC) -L. $< -loutput_static -o $@
 
+prog-so:export LD_LIBRARY_PATH=$(CURRENT_DIR)
 prog-so:	prog.o liboutput.so
-	export LD_LIBRARY_PATH="$(LD_LIBRARY_PATH);`pwd`"
 	$(CC) -L. $< -loutput -o $@
 
+test:export LD_LIBRARY_PATH=$(CURRENT_DIR)
 test:	prog prog-a prog-so
-	export LD_LIBRARY_PATH="$(LD_LIBRARY_PATH);`pwd`"
 	mkdir -p $(TEST_DIR)
 	./run_test.sh $(TEST_DIR)
 	cmp $(TEST_DIR)/prog.txt $(TEST_DIR)/prog-a.txt
-	cmo $(TEST_DIR)/prog.txt $(TEST_DIR)/prog-so.txt
+	cmp $(TEST_DIR)/prog.txt $(TEST_DIR)/prog-so.txt
 	cmp $(TEST_DIR)/prog-a.txt $(TEST_DIR)/prog-so.txt
-
 	rm -rf $(TEST_DIR)
 
 README:	prog
