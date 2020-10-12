@@ -1,3 +1,5 @@
+CFLAGS = -Wall -fPIC
+
 GENERATES = prog prog-a prog-so README
 TEST_DIR = tmp_dir
 TRASH = *.o *~ o.* *.a *.so $(TEST_DIR)
