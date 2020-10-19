@@ -12,8 +12,11 @@ set(CURSES_NEED_WIDE TRUE)
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall")
 
 option(WITHOUT_UTF "Disable UTF" OFF)
+
 if (WITHOUT_UTF)
-    add_compile_definitions(WITHOUT_UTF=1)
+  add_definitions(-DWITHOUT_UTF=1)
+else ()
+  add_definitions(-DWITHOUT_UTF=0)
 endif ()
 
 add_executable(regexer window.c)
