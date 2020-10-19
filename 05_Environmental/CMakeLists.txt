@@ -22,3 +22,6 @@ endif ()
 add_executable(regexer window.c)
 
 target_link_libraries(regexer ${NCURSES_LIBRARY} ${PCRE_LIBRARY})
+add_custom_target(allclean
+    COMMAND rm -rf regexer CMakeCache.txt CMakeFiles cmake_install.cmake  Makefile
+)
