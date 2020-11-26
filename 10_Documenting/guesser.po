@@ -1,0 +1,74 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-26 05:47+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: /home/adis_davletov/GIT/linux-dev-2020/10_Documenting/guesser.cpp:37
+#, c-format
+msgid ""
+"Guesser game, just try it%1$s%1$sUsage: game [--help] [-r]%1$s%1$sOptions:"
+"%1$s\t--help,  -- print help message%1$s\t-r,      -- turn on roman numbers "
+"notation%1$s%1$s"
+msgstr ""
+"Игра угадайка, просто попробуй%1$s%1$sИспользование: game [--help] [-r]%1$s"
+"%1$sОпции:%1$s\t--help,  -- напечатать помощь%1$s\t-r,      -- включить "
+"римские цифры%1$s%1$s"
+
+#: /home/adis_davletov/GIT/linux-dev-2020/10_Documenting/guesser.cpp:74
+#, fuzzy, c-format
+msgid "Guess the number from %s to %s\n"
+msgstr "Загадайте число от %s до %s\n"
+
+#: /home/adis_davletov/GIT/linux-dev-2020/10_Documenting/guesser.cpp:76
+#, fuzzy, c-format
+msgid "Guess the number from %d to %d\n"
+msgstr "Загадайте число от %d до %d\n"
+
+#: /home/adis_davletov/GIT/linux-dev-2020/10_Documenting/guesser.cpp:83
+#, fuzzy, c-format
+msgid "Your number is %s\n"
+msgstr "Ваше число %s\n"
+
+#: /home/adis_davletov/GIT/linux-dev-2020/10_Documenting/guesser.cpp:85
+#, c-format
+msgid "Your number is %d\n"
+msgstr "Ваше число %d\n"
+
+#: /home/adis_davletov/GIT/linux-dev-2020/10_Documenting/guesser.cpp:92
+#, fuzzy, c-format
+msgid "Is it bigger than %s?\n"
+msgstr "Оно больше %s?\n"
+
+#: /home/adis_davletov/GIT/linux-dev-2020/10_Documenting/guesser.cpp:94
+#, c-format
+msgid "Is it bigger than %d?\n"
+msgstr "Оно больше %d?\n"
+
+#: /home/adis_davletov/GIT/linux-dev-2020/10_Documenting/guesser.cpp:96
+#, c-format
+msgid "Type %s or %s\n"
+msgstr "Введите %s или %s\n"
+
+#: /home/adis_davletov/GIT/linux-dev-2020/10_Documenting/guesser.cpp:96
+#: /home/adis_davletov/GIT/linux-dev-2020/10_Documenting/guesser.cpp:99
+msgid "yes"
+msgstr "да"
+
+#: /home/adis_davletov/GIT/linux-dev-2020/10_Documenting/guesser.cpp:96
+#: /home/adis_davletov/GIT/linux-dev-2020/10_Documenting/guesser.cpp:102
+msgid "no"
+msgstr "нет"
