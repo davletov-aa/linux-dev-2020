@@ -10,6 +10,5 @@ add_executable(guesser guesser.cpp)
 
 install(TARGETS guesser RUNTIME DESTINATION ${CMAKE_INSTALL_FULL_BINDIR})
 GETTEXT_PROCESS_PO_FILES(ru ALL INSTALL_DESTINATION ${CMAKE_INSTALL_FULL_LOCALEDIR} PO_FILES guesser.po)
-add_compile_definitions(CMAKE_INSTALL_FULL_LOCALEDIR=${CMAKE_INSTALL_FULL_LOCALEDIR})
 
 add_custom_target(allclean COMMAND rm -rf CMakeCache.txt  CMakeFiles  cmake_install.cmake Makefile ru guesser guesser.gmo)
